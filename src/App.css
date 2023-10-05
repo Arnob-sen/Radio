@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: #24262b;
+  color: #a2abbd;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
+  font-size: 44px;
+  padding: 60px 0;
 }
-
-.App-link {
-  color: #61dafb;
+#app {
+  display: flex;
+  flex-direction: column;
+  width: 640px;
+  -webkit-box-shadow: 0px 65px 35px -50px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 65px 35px -50px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 65px 35px -50px rgba(0, 0, 0, 0.75);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav {
+  color: #fff;
+  background-color: #302f30;
+  height: 160px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 40px 40px 0 0;
+  font-weight: bold; 
+  .nav-item {
+    &:nth-child(1) {
+      background: url(https://raw.githubusercontent.com/netguru/junior-frontend-recruitment-task/master/imgs/back-arrow.png);
+      width: 28px;
+      height: 48px;
+    }
+    &:nth-child(3) {
+      background: url(https://raw.githubusercontent.com/netguru/junior-frontend-recruitment-task/master/imgs/switch.png);
+      width: 44px;
+      height: 52px;
+    }
   }
-  to {
-    transform: rotate(360deg);
+}
+.station-list {
+  box-sizing: border-box;
+  background-color: #2f2f3b;
+  margin: 0;
+  padding: 20px 40px 0 40px;
+  height: 690px;
+  overflow-y: scroll;
+  .station {
+    min-height: 120px;
+    line-height: 120px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #43434d;
+    cursor: pointer;
+    .station-details {
+      height: 280px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding-top: 40px;
+      .station-details-item {
+        &:nth-child(1) {
+          background: url(https://raw.githubusercontent.com/netguru/junior-frontend-recruitment-task/master/imgs/minus.png);
+          width: 64px;
+          height: 64px;
+        }
+        &:nth-child(2) {
+          width: 280px;
+          height: 280px;
+          box-sizing: border-box;
+          border: 4px solid #43434d;
+          border-radius: 50%;
+          background-color: #22222b;
+        }
+        &:nth-child(3) {
+          background: url(https://raw.githubusercontent.com/netguru/junior-frontend-recruitment-task/master/imgs/plus.png);
+          width: 64px;
+          height: 64px;
+        }
+      }
+    }
+    .station-number {
+      float: right;
+      font-weight: bold;
+    }
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+}
+.station-info {
+  box-sizing: border-box;
+  border-top: 2px solid #43434d;
+  height: 160px;
+  border-radius: 0 0 40px 40px;
+  background-color: #22222b;
+  padding-top: 40px;
+  text-align: center;
+  .header {
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: bold;
   }
 }

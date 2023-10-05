@@ -60,6 +60,7 @@ body {
       .station-details-item {
         &:nth-child(1) {
           background: url(https://raw.githubusercontent.com/netguru/junior-frontend-recruitment-task/master/imgs/minus.png);
+          /* background: url(https://raw.githubusercontent.com/netguru/junior-frontend-recruitment-task/master/imgs/minus.png); */
           width: 64px;
           height: 64px;
         }
